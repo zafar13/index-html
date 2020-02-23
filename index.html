@@ -1,56 +1,72 @@
-<div id="box" style="width: 300px; height :300px; background-color: red">
-</div>
-<br />
-<div>
-pilih warna box:
-<select id="color-List">
-<option value ="red" checked>red</option>
-<option value ="green" checked>green</option>
-<option value ="blue" checked>blue</option>
-<option value ="yellow" checked>yellow</option>
-<option value ="gray" checked>gray</option>
-<option value ="pink" checked>pink</option>
-<option value ="brown" checked>brown</option>
-</select>
-</div>
-<div>
-pilih ukuran box:
-<select id="size-List">
-<option value ="200" checked>200</option>
-<option value ="300" checked>300</option>
-<option value ="400" checked>400</option>
-</select>
-</div>
-<div>
-pilih ukuran box:
-<select id ="box-Show">
-<option value ="show" checked>show</option>
-<option value ="hide" checked>hide</option>
-</select>
-</div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+<!DOCTYPE html>
+<html><head>
+    <!-- Fill with title and name -->
+    <title>
+        name card
+    </title>
+    <meta name="author" content="m nur" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <!-- Fill with styling and icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://themes.gohugo.io//theme/pulp/img/favicon.ico">
+    <link rel="stylesheet" href="https://themes.gohugo.io/theme/pulp/style.min.a50e85be2191b7446e684667eb002377b10f833f329c30d9b701ea188a664750.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Fill with meta description -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="Aku jelek dan aku bangga" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://themes.gohugo.io//theme/pulp/" />
+    <meta property="og:updated_time" content="2020-02-23T00:00:00+00:00" />
+    <meta itemprop="name" content="Aku jelek dan aku bangga">
+    <meta itemprop="description" content="Aku jelek dan aku bangga">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="@yourusername"/>
+    <meta name="twitter:description" content="Aku jelek dan aku bangga"/>
 
-<script>
-$(document).ready(function(){
-	var box =$("#box");
-	var colorList = $("#color-List")
-	var sizeList = $("#size-List")
-	var boxShow= $("#box-Show")
-	colorList.on('change',function(evenSelect){
-		box.css('backgroundColor',evenSelect.target.value);
-	});
-	sizeList.on('change',function(eventSelect){
-		box.css('width',eventSelect.target.value);
+    <!--[if lte IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
 
-	});
-	boxShow.on('change',function(evenSelect){
-		if (evenSelect.target.value=="show"){
-			box.show()
-		}else{
-			box.hide()
-		}
-
-	});
-
-});
-</script>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+    <div id="profileContainer">
+      <div id="profile">
+        <header>
+            <div class="avatar">
+                <!--profile-->
+                <img class="avatarMask" src="https://images-cdn.9gag.com/photo/aZxDem3_460s.jpg" alt="avatar">
+                <!--border-->
+                <img src="https://themes.gohugo.io//theme/pulp/img/avatar-border.svg" alt="avatar-border">
+            </div>
+          
+            <h1 class="author">
+                M Nur Iskandar Ash Shidiq
+            </h1>
+        </header>
+        
+        <p style ="color:silver;">
+            Aku jelek dan aku bangga   
+        </p>
+        
+        <nav>
+          <ul>
+            <li><a href="https://medium.com" aria-label="blog"><i class='fa fa-book-open fa-lg' style ="color:green;"></i><br></a></li>
+            <li><a href="https://twitter.com/username" aria-label="twitter"><i class='fab fa-twitter fa-lg'style ="color:darkblue;"></i><br></a></li>
+            <li><a href="https://github.com/zafar13" aria-label="github"><i class='fab fa-github fa-lg'style ="color:magenta;"></i><br></a></li>
+            <li><a href="mailto:username@example.com" aria-label="email"><i class='fa fa-envelope fa-lg'style ="color:red;"></i><br></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div><footer>
+  <p>
+    &copy; 2020 Your Name.
+    Copied from <a href="https://github.com/koirand/pulp/">pulp</a> theme.
+  </p>
+</footer>
+</body>
+</html>
