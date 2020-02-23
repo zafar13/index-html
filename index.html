@@ -1,0 +1,56 @@
+<div id="box" style="width: 300px; height :300px; background-color: red">
+</div>
+<br />
+<div>
+pilih warna box:
+<select id="color-List">
+<option value ="red" checked>red</option>
+<option value ="green" checked>green</option>
+<option value ="blue" checked>blue</option>
+<option value ="yellow" checked>yellow</option>
+<option value ="gray" checked>gray</option>
+<option value ="pink" checked>pink</option>
+<option value ="brown" checked>brown</option>
+</select>
+</div>
+<div>
+pilih ukuran box:
+<select id="size-List">
+<option value ="200" checked>200</option>
+<option value ="300" checked>300</option>
+<option value ="400" checked>400</option>
+</select>
+</div>
+<div>
+pilih ukuran box:
+<select id ="box-Show">
+<option value ="show" checked>show</option>
+<option value ="hide" checked>hide</option>
+</select>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+
+<script>
+$(document).ready(function(){
+	var box =$("#box");
+	var colorList = $("#color-List")
+	var sizeList = $("#size-List")
+	var boxShow= $("#box-Show")
+	colorList.on('change',function(evenSelect){
+		box.css('backgroundColor',evenSelect.target.value);
+	});
+	sizeList.on('change',function(eventSelect){
+		box.css('width',eventSelect.target.value);
+
+	});
+	boxShow.on('change',function(evenSelect){
+		if (evenSelect.target.value=="show"){
+			box.show()
+		}else{
+			box.hide()
+		}
+
+	});
+
+});
+</script>
